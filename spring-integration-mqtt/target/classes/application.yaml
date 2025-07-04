@@ -1,0 +1,20 @@
+spring:
+  mqtt:
+    username: user01
+    password: 123456
+    url: ssl://m019d4ca.ala.cn-hangzhou.emqxsl.cn:8883
+    subClientId: deployment-m019d4ca
+    subTopic: /iot/switch/line,/iot/switch/device/status
+    pubClientId: pub_client_id_123
+
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://10.1.182.95:3306/switch01?useUnicode=true&characterEncoding=utf-8&useSSL=false&serverTimezone=Asia/Shanghai&allowPublicKeyRetrieval=true
+    username: root
+    password: root
+
+mybatis-plus:
+  configuration:
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+    map-underscore-to-camel-case: true
+  mapper-locations: classpath*:mapper/*Mapper.xml
